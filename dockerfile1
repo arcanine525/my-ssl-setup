@@ -1,0 +1,5 @@
+FROM nginx
+COPY html /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d
+COPY certs/dhparam.pem /etc/ssl/certs/dhparam.pem
+RUN mkdir -p /etc/letsencrypt/live/ 
